@@ -15,7 +15,8 @@ const app = new Vue(
                 'img/image2.jpg',
                 'img/image3.jpg',
                 'img/image4.jpg'
-            ]
+            ],
+            timer: 0
         },
         methods: {
             previousPhoto() {
@@ -27,7 +28,13 @@ const app = new Vue(
                 this.index += 1;
                 if (this.index == this.photos.length) 
                     this.index = 0;
+            },
+            swapImage() {
+                this.timer = setInterval(this.nextPhoto, 3000);
             }
+        },
+        created() {
+            this.swapImage();
         }
     }
 )
