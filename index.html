@@ -20,6 +20,9 @@
             <div class="next" @click='nextPhoto'>
                 <i class="fas fa-arrow-alt-circle-right"></i>
             </div>
+            <div class="navigation">
+                <i :class="(indice == index) ? 'active' : null" class="fas fa-circle" v-for='(image, indice) in photos'></i>
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
