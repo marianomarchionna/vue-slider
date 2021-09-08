@@ -20,9 +20,13 @@ const app = new Vue(
         methods: {
             previousPhoto() {
                 this.index -= 1;
+                if (this.index < 0) 
+                    this.index = (this.photos.length - 1);
             },
             nextPhoto(){
                 this.index += 1;
+                if (this.index == this.photos.length) 
+                    this.index = 0;
             }
         }
     }

@@ -11,13 +11,13 @@
 <body>
     <div id="root">
         <div class="slider">
-            <div class="previous">
+            <div class="previous" @click='previousPhoto'>
                 <i class="fas fa-arrow-alt-circle-left"></i>
             </div>
             <div class="images">
                 <img :src="photos[index]" alt="">
             </div>
-            <div class="next">
+            <div class="next" @click='nextPhoto'>
                 <i class="fas fa-arrow-alt-circle-right"></i>
             </div>
         </div>
